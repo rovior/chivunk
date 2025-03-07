@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sitelease - Agência</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="../CSS/home.css" />
+</head>
+
+<body>
+  <!-- navbar -->
+  <div id="navbar"></div> <!-- Onde o nav bar sera inserido-->
+
+ <!--About Section-->
+ <h2 class="text-cender mb-4">
+  Agência de Marketing Digital em Florianòpolis
+</h2>
+ <section id="about" class="about-section">
+  
+  <div class="row justify-content-center align-items-center">
+    <div class="col-md-6 text-center">
+      <img
+        src="https://images.pexels.com/photos/3184290/pexels-photo-3184290.jpeg?auto=compress&cs=tinysrgb&w=600"
+        alt="Agência Sitelease"
+        class="img-fluid mb-4 rounded shadow interactive-img"
+      />
+    </div>
+    <div class="col-md-6">
+      <p class="lead mb-4">
+        Na Sitelease, somos mais do que uma simples agência de marketing
+        digital. Estamos aqui para impulsionar o crescimento da sua marca,
+        utilizando estratégias inovadoras e personalizadas que conectam sua
+        empresa ao seu público-alvo.
+      </p>
+      <p class="paragraph">
+        Acreditamos que cada cliente é único e, por isso, oferecemos
+        soluções sob medida, que vão desde o desenvolvimento web até
+        campanhas de marketing digital, sempre focando na excelência e na
+        entrega de resultados. Nossa equipe de especialistas está pronta
+        para transformar suas ideias em realidade e levar sua presença
+        online a novos patamares.
+      </p>
+      <p class="paragraph">
+        Com sede em Florianópolis, entendemos as necessidades do mercado
+        local e trabalhamos incansavelmente para que sua marca se destaque
+        em um ambiente digital cada vez mais competitivo. Junte-se a nós e
+        descubra como podemos ajudar a sua empresa a crescer!
+      </p>
+      <p class="paragraph-end">
+        Conte com a Sitelease para uma jornada digital de sucesso!
+      </p>
+
+      <!--         <a href="#services" class="btn btn-primary mt-3">Saiba Mais sobre Nossos Serviços</a>   -->
+    </div>
+  </div>
+</section>
+
+
+  <!-- Onde vai aparecer o footer -->
+  <div id="footer"></div>
+
+   <!-- Widget WhatsApp -->
+   <script
+   src="https://static.elfsight.com/platform/platform.js"
+   async
+ ></script>
+ <div
+   class="elfsight-app-f8e6ed6e-26e3-483f-80f8-39c10ff2468d"
+   data-elfsight-app-lazy
+ ></div>
+
+  <!-- javascript para chamar as crianças -->
+  <script>
+    // Carregar Navbar
+    fetch('./navbar.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('navbar').innerHTML = data);
+
+    // Carregar Footer
+    fetch('./footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer').innerHTML = data);
+  </script>
+
+</body>
+</html>

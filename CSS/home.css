@@ -1,0 +1,721 @@
+#home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100vh;
+  width:100vw;
+  background: linear-gradient(to bottom, #000000, #333333);
+  color: #ffffff;
+  text-align: center;
+  flex-direction: column;
+  font-size: 2.5rem;
+  font-weight: bold;
+  overflow: hidden;
+}
+.banner-content{
+  position: absolute;
+  z-index: 2;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+  padding: 20px 40px;
+  border-radius: 10px; /* Bordas arredondadas */
+  max-width: 80%;
+}
+.banner-image{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height:100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.5;
+}
+h1, h2, h3{
+  margin: 0.5em 0;
+}
+.contact-button{
+  padding: 10px 20px;
+  font-size: 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/***** *************** *****/
+/***** Nossos Serviços *****/
+/***** *************** *****/
+#services .row {
+}
+
+#services .col-md-4 {
+}
+
+#services {
+  background-color: #464956;
+  gap: 10px;
+}
+
+/* Serviço card styling */
+.service-card {
+  padding: 10px;
+  /* espaçamento interno */
+  width: 100%;
+  /* faz as cartas ocuparem 100% da coluna */
+  max-width: 350px;
+  /*define uma largura maxima para as cartas*/
+  margin: 1rem auto;
+  /*centraliza as cartas com margem*/
+  background-color: rgba(255, 255, 255, 0.9);
+  /* Fundo branco com leve transparência */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito de hover para o card */
+.service-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #555;
+  padding: 2rem;
+}
+
+.service-image {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.service-card,
+.project-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover,
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+  padding: 10px;
+}
+
+.service-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/***** *************** *****/
+/*****    Portifolio   *****/
+/***** *************** *****/
+#portfolio {
+  background-color: #343a40;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+#portfolio {
+  background-color: #f8f9fa;
+  /* Cor de fundo suave */
+  padding: 50px 0;
+  /* Padding adicional */
+}
+
+.portfolio-card {
+  position: relative;
+  overflow: hidden;
+  /* Oculta qualquer conteúdo que exceda o card */
+  border-radius: 10px;
+  /* Bordas arredondadas */
+}
+
+.portfolio-card img {
+  transition: transform 0.3s ease;
+  /* Efeito de transição suave ao passar o mouse */
+}
+
+.portfolio-card:hover img {
+  transform: scale(1.1);
+  /* Aumenta a imagem ao passar o mouse */
+}
+
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  /* Fundo escuro transparente */
+  color: white;
+  /* Texto branco */
+  opacity: 0;
+  /* Inicialmente invisível */
+  transition: opacity 0.3s ease;
+  /* Efeito de transição suave */
+  text-align: center;
+  /* Centraliza o texto */
+}
+
+.portfolio-card:hover .portfolio-overlay {
+  opacity: 1;
+  /* Torna o overlay visível ao passar o mouse */
+}
+
+.portfolio-overlay h3 {
+  font-size: 1.5rem;
+  /* Tamanho da fonte do título */
+  margin-bottom: 0.5rem;
+  /* Espaçamento abaixo do título */
+}
+
+.portfolio-overlay p {
+  font-size: 1rem;
+  /* Tamanho da fonte da descrição */
+  padding: 0 10px;
+  /* Padding lateral */
+}
+
+/* Estilo adicional para melhorar a visualização */
+h2 {
+  font-family: "Arial", sans-serif;
+  /* Fonte da seção */
+  font-weight: bold;
+  /* Negrito */
+  color: #333;
+  /* Cor do título */
+}
+
+.portfolio-card {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  /* Sombra sutil */
+}
+
+.portfolio-overlay h3 {
+  font-size: 1.25rem;
+  /* Tamanho da fonte do título ajustado */
+}
+
+.portfolio-overlay p {
+  font-size: 0.9rem;
+  /* Tamanho da fonte da descrição ajustado */
+}
+
+.portfolio-card {
+  border: 2px solid #ccc;
+  /* Borda do quadrado */
+  border-radius: 10px;
+  /* Bordas arredondadas */
+  overflow: hidden;
+  /* Esconde partes da imagem que saem do quadrado */
+  transition: transform 0.3s, box-shadow 0.3s;
+  /* Efeito de transição para a interação */
+  position: relative;
+  /* Necessário para posicionar a sombra */
+}
+
+.portfolio-card:hover {
+  transform: scale(1.05);
+  /* Aumenta o tamanho do quadrado ao passar o mouse */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  /* Adiciona sombra ao quadrado ao passar o mouse */
+}
+
+.portfolio-card img {
+  width: 100%;
+  /* Faz a imagem ocupar toda a largura do quadrado */
+  height: 200px;
+  /* Define uma altura fixa para todas as imagens */
+  object-fit: cover;
+  /* Faz com que a imagem cubra todo o espaço disponível */
+}
+
+/* Gradiente para Títulos */
+.text-gradient {
+  background: linear-gradient(90deg, #4da6ff, #4dff88);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Estilo dos cartões do portfólio */
+.portfolio-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.portfolio-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo do overlay */
+.portfolio-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 1rem;
+  transition: transform 0.3s;
+  transform: translateY(100%);
+}
+
+.portfolio-card:hover .portfolio-overlay {
+  transform: translateY(0);
+}
+
+/* Estilo dos logos dos clientes */
+.client-logo {
+  transition: transform 0.3s;
+}
+
+.client-logo:hover {
+  transform: scale(1.1);
+}
+
+/* Estilo para o fundo da seção */
+#portfolio-clientes {
+  padding: 4rem 0;
+  color: #ffffff;
+  background-color: #282c34;
+}
+
+
+
+
+/*****       ***************      *****/
+/*****    testimonials section    *****/
+/*****       ***************      *****/
+h2{
+  text-align: center;
+  font-weight: bold;
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+/* Estilo de cartões com efeito moderno */
+.testimonial-card, .benefit-card {
+  background: #1a1a1a;
+  color: #e6e6e6;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+  margin-bottom: 4rem;
+}
+
+.testimonial-card:hover, .benefit-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+}
+
+/* Estilo dos blocos de texto */
+.testimonial-card h5 {
+  color: #4da6ff;
+  font-weight: bold;
+}
+
+.benefit-card h4 {
+  color: #4dff88;
+  font-weight: bold;
+}
+
+/* Círculo de ícones */
+.icon-circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #0d0d0d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  transition: background-color 0.3s;
+}
+
+.icon-circle:hover {
+  background-color: #333;
+}
+
+/* Cores do Bloco */
+blockquote p {
+  font-style: italic;
+  color: #cfcfcf;
+}
+
+/* Configurações de animação de hover */
+.testimonial-card:hover img, .benefit-card:hover .icon-circle img {
+  filter: brightness(1.3);
+}
+
+#testimonials{
+  padding: 4rem 0;
+  color: #ffffff;
+  background-color: #0d0d0d;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*****    ***************      *****/
+/*****    Contact Section      *****/
+/*****    ***************      *****/
+#contact {
+  background-color: #f8f9fa;
+  /* Cor de fundo suave */
+  border-radius: 10px;
+  /* Bordas arredondadas */
+  padding: 30px;
+  /* Espaçamento interno */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  /* Sombra para destaque */
+  margin-bottom: 50px;
+}
+
+#contact h2 {
+  color: #343a40;
+  /* Cor do título */
+  font-weight: 600;
+  /* Negrito */
+}
+
+.form-control {
+  border: 1px solid #ced4da;
+  /* Borda padrão */
+  border-radius: 5px;
+  /* Bordas arredondadas nos campos de entrada */
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  /* Borda azul ao focar */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  /* Sombra ao focar */
+}
+
+.btn-primary {
+  background-color: #007bff;
+  /* Cor do botão */
+  border: none;
+  /* Remove a borda padrão */
+  border-radius: 5px;
+  /* Bordas arredondadas no botão */
+  padding: 12px 20px;
+  /* Aumenta o padding do botão */
+  font-weight: bold;
+  /* Botão em negrito */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  /* Cor ao passar o mouse */
+  transition: background-color 0.3s;
+  /* Transição suave */
+}
+
+/* contatos final */
+.social-icons a {
+  font-size: 24px;
+  color: #007bff;
+  /* Cor do ícone */
+}
+
+.social-icons a:hover {
+  color: #0056b3;
+  /* Cor ao passar o mouse */
+}
+
+.map-container {
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.map-container {
+  position: relative;
+}
+
+.custom-map-control-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 999;
+  outline: none;
+  /* Remove a borda preta do foco */
+}
+
+/* Remover a borda ao receber foco */
+.custom-map-control-button:focus {
+  outline: none;
+  border: 1px solid transparent;
+  /* Garantir que não haja borda visível */
+}
+
+.custom-map-control-button:hover {
+  color: blue;
+  /* Mudando a cor do texto para azul no hover */
+}
+
+/* Estilo para adicionar espaçamento entre a section e o footer */
+section {
+  margin-bottom: 50px;
+  /* Distância entre a seção e o rodapé */
+}
+
+
+
+
+
+
+/*****    ***************      *****/
+/*****    barra de agencia     *****/
+/*****    ***************      *****/
+footer {
+  background-color: #343a40;
+  /* cor de fundo escura */
+  color: white;
+  /* cor do texto */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+.emailOuCelular {
+  display: flex;
+  justify-content: space-evenly;
+  border: 2px solid black;
+}
+#cellAdd {
+  display: none;
+}
+.form-row {
+  height: 200px;
+}
+#contact {
+  margin-top: 20px;
+}
+#bodyAdmin {
+  margin: 0 auto;
+}
+.tabelaClientes {
+  display: grid;
+  margin: 0 auto;
+}
+
+.list-group-item:hover {
+  background-color: #f8f9fa; /* Cor clara ao passar o mouse */
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
+#containerTabela{
+  background-color: black;
+  height: 100vh;
+}
+
+/*
+UMA EXPLICAÇÃO SOBRE ALGUNS ATRIBUTOS
+Vale lembrar que isso não segue uma regra para que realmente saiba oque se passa é preciso entender  a funcionalidade no geral de cada um, isso é apenas para dar uma base do que esta acontecendo. Para alguns que podem ter mais de uma definição dependendo do contexto foi incluido um (/) para por as expecificações
+
+******* a *********
+ align-items: center;  
+ Alinha o conteúdo verticalmente ao centro 
+
+
+******* b *********
+background: linear-gradient(to bottom, #000000, #333333);  
+ Aplica um gradiente de preto para cinza 
+
+background-color: rgba(0, 0, 0, 0.5);  
+Define um fundo preto semi-transparente 
+
+ border-radius: 10px;  Arredonda os cantos do fundo 
+
+******* c *********
+ color: #ffffff; 
+ Define a cor do texto como branca 
+
+******* d *********
+ display: flex;  
+ Define um layout flexível para organizar o conteúdo internamente 
+
+******* e *********
+
+******* f *********
+flex-direction: column;  
+ Organiza os elementos flexíveis verticalmente 
+
+ font-size: 2.5rem;  
+ Define o tamanho do texto 
+
+ font-weight: bold; 
+ Aplica peso ao texto, tornando-o mais espesso 
+
+ ******* g *********
+
+******* h *********
+height: 100vh; 
+ Define a altura para ocupar toda a altura da janela de visualização 
+
+height: 100%; 
+Define a altura para ocupar toda a altura do banner 
+
+******* i *********
+
+
+******* j *********
+ justify-content: center; 
+ Alinha o conteúdo horizontalmente ao centro 
+
+
+
+
+******* k *********
+
+******* l *********
+
+left: 0;  
+Define a posição à esquerda no início do banner 
+
+******* m *********
+
+max-width: 80%;  
+Limita a largura do conteúdo a 80% da largura total 
+
+******* n *********
+ 
+
+******* o *********
+ overflow: hidden;  
+ Oculta qualquer conteúdo que ultrapasse os limites da seção 
+
+  object-fit: cover; 
+ Ajusta a imagem para cobrir toda a área do banner, mantendo a proporção 
+
+******* p *********
+ position: relative;
+ Permite posicionar elementos filhos de forma absoluta, mantendo o banner como referência
+
+ position: absolute;  
+ Permite posicionar o conteúdo em uma camada superior 
+
+padding: 20px 40px; 
+Adiciona preenchimento interno ao redor do conteúdo 
+
+ position: absolute;  
+ Posiciona a imagem em relação ao banner 
+
+******* q *********
+
+******* r *********
+
+******* s *********
+
+******* t *********
+ text-align: center;  
+ Centraliza o texto horizontalmente / Centraliza o texto do conteúdo 
+
+ 
+ top: 0;  
+ Define a posição superior no início do banner 
+
+
+
+
+******* u *********
+
+******* v *********
+
+******* w *********
+ width: 100vw;  
+ Define a largura para ocupar toda a largura da janela de visualização
+
+ width: 100%; 
+  Define a largura para ocupar toda a largura do banner 
+
+******* x *********
+
+******* y *********
+
+******* z *********
+    z-index: 2;  
+    Posiciona o conteúdo acima da imagem de fundo 
+
+ z-index: 0; 
+ Coloca a imagem no nível mais baixo,
+
+
+
+ 
+
+
+
+
+*/

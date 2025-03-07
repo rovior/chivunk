@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sitelease - Agência</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../CSS/home.css" />
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <div id="navbar"></div> <!-- Onde o nav bar sera inserido-->
+
+    <!-- *************  -->
+    <!-- Contact Section -->
+    <!-- ************** -->
+    <section id="contact" class="contact-section py-5">
+      <h2 class="text-center mb-4">Entre em Contato</h2>
+      <p class="text-center mb-4">
+        Estamos prontos para ajudar! Preencha o formulário abaixo ou entre em
+        contato diretamente pelos nossos canais.
+      </p>
+      <div class="row mb-5">
+        <div class="col-md-6 mx-auto mt-5">
+          <form
+            class="formularioPHP"
+            action="../PHP/recebe-dados.php"
+            method="post"
+          >
+            <div class="form-row">
+              <div class="col-6">
+                <div class="form-group col-md-12">
+                  <label for="name">Nome</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="nome-do-usuario"
+                    placeholder="Seu nome"
+                    required
+                  />
+                </div>
+                <div class="selecaoServicos col-md-12 form-group">
+                  <label for="opcao">Escolha um de nossos Serviços:</label>
+                  <select id="opcao" name="opcao" class="form-control" required>
+                    <option value="Desenvolvimento Web">Desenvolvimento Web</option>
+                    <option value="Marketing Digital">Marketing Digital</option>
+                    <option value="Consultoria de Design">Consultoria de Design</option>
+                    <option value="Desenvolvimento Mobile">Desenvolvimento Mobile</option>
+                    <option value="Otimização de Busca (SEO)">Otimização de Busca (SEO)</option>
+                    <option value="Gestão de Mídias Sociais">Gestão de Mídias Sociais</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-6">
+                <div id="emailCheck" class="form-group col-md-12">
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    name="email-do-usuario"
+                    placeholder="Seu email"
+                    required
+                  />
+                </div>
+                <div id="celularCheck" class="form-group col-md-12">
+                  <input type="checkbox" name="contact-method" id="celular" />
+                  <label for="email">Celular:</label>
+                  <input
+                    id="cellAdd"
+                    type="tel"
+                    class="form-control"
+                    name="celular-do-usuario"
+                    placeholder="Seu celular"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-group form-check">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                name="promocao"
+                id="promocao"
+                value="sim"
+              />
+              <label class="form-check-label" for="promocao"
+                >Aceito receber informações sobre promoções</label
+              >
+            </div>
+            <button
+              id="btnPHPForm"
+              type="submit"
+              name="enviar"
+              class="btn btn-primary btn-block"
+            >
+              Enviar
+            </button>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <h4>Informações de Contato</h4>
+          <p><strong>Email:</strong> contato@sitelease.com.br</p>
+          <p><strong>Telefone:</strong> (48) 9 91821109</p>
+          <p>
+            <strong>Endereço:</strong> Rua Maria Cecilia Sodre, 309 - Pria João
+            Roza, Biguaçu - SC
+          </p>
+          <h4>Siga-nos</h4>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=61570243958351" class="mr-3"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/siteleaseweb/" class="mr-3"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <h4 class="text-center">Nossa Localização</h4>
+          <div class="map-container" style="position: relative">
+            <!-- O iframe exibe o mapa -->
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3155697.3075514656!2d-48.87733028373342!3d-27.595538929503157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9527390b97d52c61%3A0xb4e5d135f5174a8c!2sFlorian%C3%B3polis%2C%20SC!5e0!3m2!1spt-BR!2sbr!4v1632924058581!5m2!1spt-BR!2sbr"
+              width="100%"
+              height="250"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+            >
+            </iframe>
+
+            <!-- Botão Ver no Google Maps sobrepondo o mapa -->
+            <button
+              onclick="window.open('https://maps.app.goo.gl/YwD5pyDi7aZJsJiD6', '_blank')"
+              class="custom-map-control-button"
+            >
+              Ver no Google Maps
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <style></style>
+    </section>
+     <!-- Onde vai aparecer o footer -->
+     <div id="footer"></div>
+
+      <!-- Widget WhatsApp -->
+    <script
+    src="https://static.elfsight.com/platform/platform.js"
+    async
+  ></script>
+  <div
+    class="elfsight-app-f8e6ed6e-26e3-483f-80f8-39c10ff2468d"
+    data-elfsight-app-lazy
+  ></div>
+
+     <!-- javascript para chamar as crianças -->
+     <script>
+       function toggleButton() {
+         document.getElementById("enviar").disabled = !document.getElementById("promocao").checked;
+       }
+       fetch('./navbar.html')
+         .then(response => response.text())
+         .then(data => document.getElementById('navbar').innerHTML = data);
+       fetch('./footer.html')
+         .then(response => response.text())
+         .then(data => document.getElementById('footer').innerHTML = data);
+     </script>
+   </body>
+</html>

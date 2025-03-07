@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sitelease - Agência</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="../CSS/home.css" />
+</head>
+
+<body>
+  <!-- navbar -->
+  <div id="navbar"></div> <!-- Onde o nav bar sera inserido-->
+
+
+ <!-- ***************************  -->
+ <!--         nossos serviços       -->
+  <!-- ***************************  -->
+  <section id="services" class="container-fluid py-2">
+    <h2 class="text-center mb-4 text-light">Nossos Serviços</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-4 text-center mb-3">
+          <div class="service-card">
+            <img
+              src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=600"
+              alt="Desenvolvimento Web"
+              class="img-fluid mb-3 service-image"
+            />
+            <h3 class="textTitle">Desenvolvimento Web</h3>
+            <p class="textp">
+              Criação de sites responsivos e personalizados para atender suas
+              necessidades.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 text-center mb-3">
+          <div class="service-card">
+            <img
+              src="https://images.pexels.com/photos/8829445/pexels-photo-8829445.jpeg?auto=compress&cs=tinysrgb&w=600"
+              alt="Marketing Digital"
+              class="img-fluid mb-3 service-image"
+            />
+            <h3 class="textTitle">Marketing Digital</h3>
+            <p class="textp">
+              Estratégias digitais para aumentar o alcance da sua marca e atrair
+              novos clientes.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 text-center mb-3">
+          <div class="service-card">
+            <img
+              src="https://images.pexels.com/photos/1181623/pexels-photo-1181623.jpeg?auto=compress&cs=tinysrgb&w=600"
+              alt="Consultoria de Design"
+              class="img-fluid mb-3 service-image"
+            />
+            <h3 class="textTitle">Consultoria de Design</h3>
+            <p class="textp">
+              Soluções criativas em design gráfico e experiência do usuário.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 text-center mb-3">
+          <div class="service-card">
+            <img
+              src="https://images.pexels.com/photos/3184322/pexels-photo-3184322.jpeg?auto=compress&cs=tinysrgb&w=600"
+              alt="Desenvolvimento Mobile"
+              class="img-fluid mb-3 service-image"
+            />
+            <h3 class="textTitle">Desenvolvimento Mobile</h3>
+            <p class="textp">
+              Criação de aplicativos móveis personalizados para Android e iOS.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 text-center mb-3">
+          <div class="service-card">
+            <img
+              src="https://images.pexels.com/photos/13628541/pexels-photo-13628541.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="SEO"
+              class="img-fluid mb-3 service-image"
+            />
+            <h3 class="textTitle">Otimização de Busca (SEO)</h3>
+            <p class="textp">
+              Estratégias para melhorar a visibilidade do seu site nas pesquisas
+              online.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 text-center mb-3">
+          <div class="service-card">
+            <img
+              src="https://images.pexels.com/photos/3769745/pexels-photo-3769745.jpeg?auto=compress&cs=tinysrgb&w=600"
+              alt="Gestão de Mídias Sociais"
+              class="img-fluid mb-3 service-image"
+            />
+            <h3 class="textTitle">Gestão de Mídias Sociais</h3>
+            <p class="textp">
+              Criação e gerenciamento de conteúdo para suas redes sociais.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- Onde vai aparecer o footer -->
+  <div id="footer"></div>
+
+   <!-- Widget WhatsApp -->
+   <script
+   src="https://static.elfsight.com/platform/platform.js"
+   async
+ ></script>
+ <div
+   class="elfsight-app-f8e6ed6e-26e3-483f-80f8-39c10ff2468d"
+   data-elfsight-app-lazy
+ ></div>
+
+  <!-- javascript para chamar as crianças -->
+  <script>
+    // Carregar Navbar
+    fetch('./navbar.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('navbar').innerHTML = data);
+
+    // Carregar Footer
+    fetch('./footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer').innerHTML = data);
+  </script>
+
+</body>
+</html>

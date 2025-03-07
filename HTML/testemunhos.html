@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sitelease - Agência</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../CSS/home.css" />
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <div id="navbar"></div> <!-- Onde o nav bar sera inserido-->
+
+   
+    <!-- **********  -->
+    <!-- Testimonials -->
+    <!-- **********  -->
+    <section id="testimonials" class="py-5" style="background-color: #464956">
+      <!-- Testimonials Section -->
+      <div class="container">
+        <h2 class="text-center mb-5 text-light">O que nossos clientes dizem</h2>
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="testimonial-card p-4 rounded shadow">
+              <div class="d-flex align-items-center mb-3">
+                <img
+                  src="https://img.icons8.com/ios-filled/50/4da6ff/user-male-circle.png"
+                  alt="Cliente"
+                  class="me-3 testimonial-img"
+                />
+                <h5 class="mb-0">João Silva</h5>
+              </div>
+              <blockquote class="blockquote">
+                <p>
+                  A Sitelease nos ajudou a transformar nosso site em uma
+                  verdadeira máquina de vendas! So temos a agradecer.
+                </p>
+              </blockquote>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="testimonial-card p-4 rounded shadow">
+              <div class="d-flex align-items-center mb-3">
+                <img
+                  src="https://img.icons8.com/ios-filled/50/4dff88/user-female-circle.png"
+                  alt="Cliente"
+                  class="me-3 testimonial-img"
+                />
+                <h5 class="mb-0">Maria Souza</h5>
+              </div>
+              <blockquote class="blockquote">
+                <p>
+                  O time de marketing digital é incrível. Nossos leads
+                  aumentaram em 200%!
+                </p>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Marketing Digital Benefits Section -->
+      <div class="container mt-5">
+        <h2 class="text-center mb-5 text-light">
+          Por que investir em Marketing Digital?
+        </h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="benefit-card p-4 rounded shadow text-center">
+              <div class="icon-circle mb-3">
+                <i
+                  class="fas fa-chart-line"
+                  style="font-size: 48px; color: #e7e2e2"
+                ></i>
+              </div>
+              <h4>Maior Alcance</h4>
+              <p>
+                Alcance clientes em qualquer lugar e a qualquer momento,
+                aumentando a visibilidade da sua marca.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="benefit-card p-4 rounded shadow text-center">
+              <div class="icon-circle mb-3">
+                <img
+                  src="https://img.icons8.com/fluency/48/000000/low-price.png"
+                />
+              </div>
+              <h4>Custo-Efetivo</h4>
+              <p>
+                Campanhas digitais são mais acessíveis e podem ser adaptadas ao
+                seu orçamento.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="benefit-card p-4 rounded shadow text-center">
+              <div class="icon-circle mb-3">
+                <img
+                  src="https://img.icons8.com/fluency/48/000000/analytics.png"
+                />
+              </div>
+              <h4>Resultados Mensuráveis</h4>
+              <p>
+                Monitore o retorno de suas ações em tempo real e ajuste
+                estratégias para otimizar resultados.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Onde vai aparecer o footer -->
+    <div id="footer"></div>
+
+     <!-- Widget WhatsApp -->
+     <script
+     src="https://static.elfsight.com/platform/platform.js"
+     async
+   ></script>
+   <div
+     class="elfsight-app-f8e6ed6e-26e3-483f-80f8-39c10ff2468d"
+     data-elfsight-app-lazy
+   ></div>
+
+    <!-- javascript para chamar as crianças -->
+    <script>
+      // Carregar Navbar
+      fetch('./navbar.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('navbar').innerHTML = data);
+  
+      // Carregar Footer
+      fetch('./footer.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+
+  </body>
+</html>
