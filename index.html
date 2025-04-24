@@ -52,14 +52,14 @@
     <!-- javascript para chamar as crianças -->
     <script>
       // Carregar Navbar
-      fetch("/HTML/navbar.html")
+      fetch("./HTML/navbar.html")
         .then((response) => response.text())
         .then((data) => (document.getElementById("navbar").innerHTML = data));
 
       // Carregar Footer
-      fetch("/HTML/footer.html")
+      fetch("./HTML/footer.html")
         .then((response) => response.text())
         .then((data) => (document.getElementById("footer").innerHTML = data));
-    </script> 
+    </script>
   </body>
 </html>
