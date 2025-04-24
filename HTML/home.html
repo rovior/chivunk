@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Sitelease</title>
+
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../CSS/home.css" />
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <div id="navbar"></div>
+    <!-- Onde o nav bar sera inserido-->
+
+    <!-- Home  baner section-->
+    <section id="home" class="banner-section text-center">
+      <div class="banner-content">
+        <h1>Bem-vindo à Sitelease</h1>
+        <h2 class="text text-white">
+          Transformamos cada click em uma oportunidade e cada oportunidade em
+          clientes fiéis, impulsionando seu negócio para o próximo nível!
+        </h2>
+        <h3>Marketing Digital</h3>
+        <button class="contact-button">Entar em Contato</button>
+      </div>
+
+      <img
+        src="https://cdn.pixabay.com/photo/2019/09/15/12/09/network-4478141_1280.jpg"
+        alt="Imagem decorativa"
+        class="banner-image"
+      />
+    </section>
+
+    <!-- Onde vai aparecer o footer -->
+    <div id="footer"></div>
+
+    <!-- Widget WhatsApp -->
+    <script
+      src="https://static.elfsight.com/platform/platform.js"
+      async
+    ></script>
+    <div
+      class="elfsight-app-f8e6ed6e-26e3-483f-80f8-39c10ff2468d"
+      data-elfsight-app-lazy
+    ></div>
+
+    <!-- javascript para chamar as crianças -->
+    <script>
+      // Carregar Navbar
+      fetch("./navbar.html")
+        .then((response) => response.text())
+        .then((data) => (document.getElementById("navbar").innerHTML = data));
+
+      // Carregar Footer
+      fetch("./footer.html")
+        .then((response) => response.text())
+        .then((data) => (document.getElementById("footer").innerHTML = data));
+    </script> 
+  </body>
+</html>
